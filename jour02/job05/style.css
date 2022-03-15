@@ -1,0 +1,29 @@
+body {
+    min-height: 4096px;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+  
+  footer {
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    position: fixed;
+    /* border: 5px solid black;
+    text-align: center;
+    border-radius: 50px; */
+    /* background: rgba(11, 184, 11, 0.137); */
+  }
+  .red{
+      background-color: red;
+  }
+  
+  .yellow{
+      background-color: yellow;
+  }
+  .black{
+      background-color: black;
+  }
+  .orange{
+      background-color: orange;
+  }

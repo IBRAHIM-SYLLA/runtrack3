@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded',(event) =>{
-    // var str = document.getElementById("compteur");
-    // var btn = document.getElementById("button");
-    // var compteur = 0
-    // function updateDisplay(val) {
-    //     str.innerHTML = val;
-    // }
+    var keylogger = document.getElementById("keylogger");
+    var b = document.body;
+    b.addEventListener('keydown', (event)=>{
 
-    // btn.addEventListener('click', function addone(){
+        const key = event.key;
 
-    //     str.style.display = 'block'
-    //     updateDisplay(++compteur);
-    // })
+        console.log(key);
+
+        if(keylogger.focus){
+            keylogger.value = keylogger.value + key;
+        }
+        else{
+            keylogger.value = key
+        }
+    })
 
 // Créez un textarea dont l’id est “keylogger”. Chaque fois que l’utilisateur
 // tape une lettre sur son clavier (a-z), celle-ci est ajoutée dans le textarea
