@@ -13,7 +13,7 @@ require_once('c_inscription.php');
 </head>
 <body>
 
-<form action="" method="post">
+<form id="inscription" action="" method="post">
     <label for="nom">Nom</label>
     <input type="text" id="nom" name="nom">
     <p id='nom_p'></p>
@@ -34,7 +34,7 @@ require_once('c_inscription.php');
     <input type="password" id="confpassword" name="confpassword">
     <p id='nom_p'></p>
 
-    <button></button>
+    <button>Inscription</button>
 </form>
 </body>
 </html>

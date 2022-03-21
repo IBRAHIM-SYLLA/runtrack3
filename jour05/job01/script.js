@@ -2,37 +2,42 @@
 window.addEventListener("DOMContentLoaded", (event) =>{
 
     let input = document.querySelectorAll('input');
-    let nom = document.getElementById('nom');
-    let prenom = document.getElementById('prenom');
-
-console.log(input);
-    function champs(nom, paragraphe){
+    let p = document.querySelectorAll('p')
+console.log(p);
+    function champs(nom, paragraphe, input){
         if(nom.value.length === 0){
-            paragraphe.innerHTML = 'veuillez renseignez ce champs';
+            paragraphe.innerHTML = 'Veuillez renseignez ce champs';
             paragraphe.style.color = 'red';
         }
         else if(nom.value.length < 3){
-             paragraphe.innerHTML = 'login trop court !';
+             paragraphe.innerHTML = ' Trop court !';
+             paragraphe.style.color = 'red';
+             input.style.border.color = 'red';
         }
         else if(nom.value.length > 3){
             paragraphe.innerHTML = '';
+            input.style.color = 'black';
         }
     }
 
     // function()
-    nom.addEventListener('keyup', function(){
+    input[0].addEventListener('keyup', function(){
         // console.log(this.value);
         // console.log(this.value.length )
-        champs(nom, p[0]);
+        champs(nom, p[0], input[0]);
         // console.log(this.p);
     })
     // console.log(p)
-    prenom.addEventListener('keyup', function(){
+    input[1].addEventListener('keyup', function(){
         // console.log(this.value);
         // console.log(this.value.length )
-        champs(prenom, p[1]);
+        champs(prenom, p[1], input[1]);
         // console.log(this.p);
     })
 
     // nom.addEventListener('click')
+
+    document.getElementById("inscription").addEventListener("submit", function(){
+        
+    })
 })
